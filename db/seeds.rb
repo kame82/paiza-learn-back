@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Post.create!(
+  [
+    { title: '野球のルール基礎知識' },
+    { title: 'プロ野球選手のトレーニング方法' },
+    { title: '野球の歴史とは' },
+    { title: 'メジャーリーグと日本プロ野球の違い' },
+    { title: '野球用具の選び方' },
+    { title: '野球のポジション紹介' },
+  ])
