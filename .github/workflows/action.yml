@@ -1,20 +1,3 @@
-# name: Render Deploy
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: ttskch/render-deploy@v1.0.0
-#         with:
-#           api-key: ${{ secrets.RENDER_API_KEY }}
-#           service-id: ${{ secrets.RENDER_SERVICE_ID }}
-#           interval: 20 # optional
-#           timeout: 600 # optional
 name: Render Deploy
 
 on:
@@ -26,18 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Debug secrets
-        run: |
-          echo "RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}"
-          echo "RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}"
-
-      - name: Deploy to Render
-        uses: ttskch/render-deploy@v1.0.0
+      - uses: ttskch/render-deploy@v1.0.0
         with:
           api-key: ${{ secrets.RENDER_API_KEY }}
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
           interval: 20 # optional
-          timeout: 300 # optional
+          timeout: 600 # optional
