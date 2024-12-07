@@ -16,7 +16,7 @@
 # end
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:8000', '127.0.0.1:8000'
+    origins 'localhost:8000', '127.0.0.1:8000', 'paiza-learn.vercel.app'
 
     resource "*",
       headers: :any,
