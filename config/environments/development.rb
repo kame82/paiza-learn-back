@@ -71,5 +71,5 @@ Rails.application.configure do
   # config.hosts << "api"
   # config.hosts << "paiza-learn-back.onrender.com"
 
-  config.hosts ["api","paiza-learn-back.onrender.com"]
+  config.hosts = ["api","paiza-learn-back.onrender.com"]
 end
